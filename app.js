@@ -10,11 +10,11 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 
 
-app.get('/tobisheriff', (req, res) => {
+app.get('/', (req, res) => {
     res.render('tobisheriff');
 })
 
 
-app.listen('3000', () => {
-    console.log('Serving your site on port 3000');
+app.listen('3001', () => {
+    console.log('Serving your site on port 3001');
 })

@@ -40,17 +40,13 @@ nav .navig {
   color: rgb(247, 71, 71);
 }
 
-.container.body {
+.container {
   max-width: fit-content;
   margin: 100px 15%;
 }
 
-.container.body .segment {
+.container .section {
   margin-bottom: 100px;
-}
-
-.container.body h2 {
-  font-size: 28px;
 }
 
 .myName {
@@ -59,11 +55,11 @@ nav .navig {
   font-size: 30px;
 }
 
-.container.body p {
+.container p {
   font-size: large;
 }
 
-.container.body button {
+.container button {
   background: none;
   border: 2px solid rgb(247, 71, 71);
   border-radius: 25px;
@@ -74,7 +70,7 @@ nav .navig {
   font-weight: bold;
 }
 
-.container.body button:hover {
+.container button:hover {
   border-color: white;
   color: rgb(247, 71, 71);
   box-shadow: 0 0.5em 0.5em -0.4em burlywood;
@@ -83,76 +79,76 @@ nav .navig {
   font-weight: bold;
 }
 
-.container.body h3 {
+.container h3 {
   font-size: 30px;
 }
 
-.container.body .underline {
-  background: rgb(247, 71, 71);
-  width: 10%;
-  height: 5%;
-  margin: 0 0 30px 0;
-}
-
-.container.body .skill-set {
+.skill-sets .row div {
   background-color: rgb(30, 41, 61);
   width: 30%;
   margin: 0 50px 50px 0;
   padding: 40px 30px 20px;
 }
 
-.container.body .skill-set .white {
+.skill-sets .white {
   font-size: 27px;
   font-weight: normal;
   color: white;
   padding-left: 10px;
 }
 
-.container.body form {
+.container form {
   width: 50%;
 }
 
-.container.body form input {
+.container form input {
   background-color: rgb(30, 41, 61);
   border: none;
   height: 50px;
   color: white;
 }
 
-.container.body form input::placeholder {
+.container form input::placeholder {
   font-weight: bold;
 }
 
-.container.body form button {
+.container form button {
   width: 50%;
   margin-left: 50%;
 }
 
 footer {
-  padding: 35px 0 0 0;
   background-image: linear-gradient(to right, rgb(15 23 42), rgb(14, 16, 31), rgb(15 23 42));
   -webkit-background-clip: border-box;
   background-clip: border-box;
-  height: 200px;
-  text-align: center;
-}
-
-footer .footer-links {
-  width: 50%;
-  margin: 0 auto;
+  height: 250px;
+  padding-top: 55px;
 }
 
 footer .container {
+  margin: auto;
+  text-align: center;
   position: relative;
+  width: 80%;
+}
+
+footer .footer-links .socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+footer .footer-links .socials div {
+  margin: 0 10px;
+}
+footer .footer-links .socials div .pink {
+  padding-right: 5px;
 }
 
 footer .container .footer-copyright {
-  position: absolute;
-  top: 120px;
-  width: 100%;
+  margin-top: 40px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 767px) {
   nav .container-fluid {
     margin-left: auto;
   }
@@ -161,24 +157,34 @@ footer .container .footer-copyright {
     display: grid;
     justify-content: flex-start;
   }
+
+  .skill-sets .row {
+    flex-direction: column;
+  }
+
+  .skill-sets .row div {
+    width: 100%;
+    margin: 0 0 5px;
+  }
+
 }
 
 @media (max-width: 900px) {
-  .container.body {
+  .container {
     max-width: auto;
     margin: 50px 20px;
   }
 
-  .container.body .skill-set {
+  .skill-sets .row div {
     margin: 0 0 10px;
     padding: 60px 40px 40px;
   }
 
-  .container.body form {
+  .container form {
     width: 100%;
   }
 
-  .container.body form button {
+  .container form button {
     margin-left: 50%;
   }
 }
