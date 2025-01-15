@@ -89,6 +89,17 @@ nav .navig {
   margin: 0 50px 50px 0;
   padding: 40px 30px 20px;
 }
+marquee {
+  display: flex;
+  align-items: center;
+}
+marquee span {
+  background-color: rgb(30, 41, 61);
+  color: white;
+  height: inherit;
+  margin-right: 20px;
+  padding: 10px 10px;
+}
 
 .skill-sets .white {
   font-size: 27px;
@@ -137,9 +148,11 @@ footer .footer-links .socials {
   flex-wrap: wrap;
   justify-content: center;
 }
+
 footer .footer-links .socials div {
   margin: 0 10px;
 }
+
 footer .footer-links .socials div .pink {
   padding-right: 5px;
 }

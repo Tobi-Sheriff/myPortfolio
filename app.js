@@ -13,6 +13,9 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.get('/', (req, res) => {
     res.render('tobisheriff');
 })
+app.get('/tma', (req, res) => {
+    res.render('tobisheriff/tma');
+})
 
 
 app.listen('3001', () => {
