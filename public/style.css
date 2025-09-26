@@ -1,5 +1,7 @@
 body {
-  background-color: rgb(15 23 42);
+  /* background-color: rgb(15 23 42); */
+  background-image: url("images/hexagonal-bg.jpg");
+  background-size: cover;
   color: rgb(148 163 184);
 }
 
@@ -35,6 +37,16 @@ nav .navig {
   display: flex;
   justify-content: flex-end;
 }
+
+/* #mobile-navigation {
+  transition: 0.5s ease-out, opacity 0.5s ease-out;
+  opacity: 0;
+  transform: translate(200px);
+}
+#mobile-navigation popover-open {
+  opacity: 1;
+  transform: translate(0);
+} */
 
 .pink {
   color: rgb(247, 71, 71);
@@ -129,11 +141,10 @@ marquee span {
 }
 
 footer {
-  background-image: linear-gradient(to right, rgb(15 23 42), rgb(14, 16, 31), rgb(15 23 42));
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  height: 250px;
-  padding-top: 55px;
+  background-image: url("images/black-luxury-bg.png");
+  background-size: fill;
+  height: 200px;
+  padding-top: 50px;
 }
 
 footer .container {
