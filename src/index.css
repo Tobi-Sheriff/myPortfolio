@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Poppins:wght@500;700&display=swap');
+
+:root {
+  --primary-color: #f74747;
+  --secondary-color: #0f172a;
+  --bg-dark: #0f172a;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --glass-bg: rgba(30, 41, 61, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --nav-height: 70px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-dark);
+  background-image: url("/images/hexagonal-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text-secondary);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-primary);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Utilities */
+.pink {
+  color: var(--primary-color);
+}
+
+.text-white {
+  color: white !important;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation */
+nav {
+  height: var(--nav-height);
+  background: rgba(15, 23, 42, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0px;
+  left: 0;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: white !important;
+}
+
+/* Buttons */
+.btn-custom {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 0 15px rgba(247, 71, 71, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Section Spacing */
+.section {
+  padding: 80px 0;
+}
+
+/* Marquee Replacement */
+.ticker-wrap {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 2rem;
+  font-size: 1.2rem;
+  color: white;
+}
