@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar.jsx';
+// import { Header } from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <>
       <Navbar />
+      {/* <Header /> */}
       <div className="container">
 
         {/* Hero Section */}
@@ -123,15 +125,15 @@ const Home = () => {
           <motion.form
             className="form-group mx-auto glass-card p-5"
             style={{ maxWidth: '600px' }}
-            action="mailto:sheriffsalami@gmail.com"
+            action="mailto:s.oluwatobiloba30@gmail.com"
             method="post"
             encType="text/plain"
             initial={{ scale: 0.9, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true }}
           >
-            <input type="email" placeholder="Your Email" className="form-control mb-4 bg-transparent text-white border-secondary" style={{ height: '50px' }} />
-            <textarea placeholder="Your Message" className="form-control mb-4 bg-transparent text-white border-secondary" rows="5"></textarea>
+            <input type="email" placeholder="Your Email..." className="form-control mb-4 bg-transparent text-white border-secondary" style={{ height: '50px' }} />
+            <textarea placeholder="Your Message..." className="form-control mb-4 bg-transparent text-white border-secondary" rows="5"></textarea>
             <button className="btn btn-custom w-100">Send Message</button>
           </motion.form>
         </div>
