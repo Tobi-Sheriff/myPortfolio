@@ -43,6 +43,11 @@ a {
   transition: all 0.3s ease;
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-secondary) !important;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -133,6 +138,10 @@ nav {
   color: white;
   box-shadow: 0 0 15px rgba(247, 71, 71, 0.5);
   transform: translateY(-2px);
+}
+
+.container {
+  margin-top: 100px;
 }
 
 /* Section Spacing */

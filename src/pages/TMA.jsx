@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Navbar from '../components/Navbar.jsx';
+// import { Header } from '../components/Header.jsx';
 import Footer from '../components/Footer.jsx';
 
 // Icons for features/tech (optional mapping, or just use text in pills)
@@ -30,6 +31,7 @@ const TMA = () => {
   return (
     <>
       <Navbar />
+      {/* <Header /> */}
       <div className="container">
 
         {/* Project Header */}
@@ -65,11 +67,11 @@ const TMA = () => {
             <motion.div
               className="ticker"
               animate={{ x: ["0%", "-100%"] }}
-              transition={{ ease: "linear", duration: 20, repeat: Infinity }}
+              transition={{ ease: "linear", duration: 50, repeat: Infinity }}
               style={{ display: "inline-block", whiteSpace: "nowrap" }}
             >
               {[...features, ...features].map((feature, index) => (
-                <span key={index} className="ticker-item">{feature} • </span>
+                <span key={index} className="ticker-item">{feature} </span>
               ))}
             </motion.div>
           </div>
@@ -79,11 +81,11 @@ const TMA = () => {
             <motion.div
               className="ticker"
               animate={{ x: ["-100%", "0%"] }} // Reverse direction for variety
-              transition={{ ease: "linear", duration: 25, repeat: Infinity }}
+              transition={{ ease: "linear", duration: 50, repeat: Infinity }}
               style={{ display: "inline-block", whiteSpace: "nowrap" }}
             >
               {[...technologies, ...technologies].map((tech, index) => (
-                <span key={index} className="ticker-item">{tech} • </span>
+                <span key={index} className="ticker-item">{tech} </span>
               ))}
             </motion.div>
           </div>
@@ -116,7 +118,7 @@ const TMA = () => {
         </motion.div>
 
         {/* Github Links */}
-        <motion.div
+        {/* <motion.div
           className="section glass-card p-5 text-center"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -127,7 +129,7 @@ const TMA = () => {
             <a href="https://github.com/Tobi-Sheriff/movie-archive" className="btn btn-custom">Github Backend</a>
             <a href="https://github.com/Tobi-Sheriff/movie-archive-frontend" className="btn btn-custom">Github Frontend</a>
           </div>
-        </motion.div>
+        </motion.div> */}
 
       </div>
       <Footer />
