@@ -1,16 +1,51 @@
-# React + Vite
+# myPortfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Sheriff Salami Oluwatobiloba — full-stack developer.
+Built with React, Tailwind CSS, and Framer Motion, deployed on Vercel.
 
-Currently, two official plugins are available:
+## Tech stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** + **React Router** — SPA with client-side routing
+- **Tailwind CSS v4** — utility-first styling, theme tokens in [src/styles/theme.css](src/styles/theme.css)
+- **Framer Motion** — scroll reveals, page transitions, the hero's cursor-tracking spotlight
+- **Vite 6** — dev server and bundler
+- **react-icons** / **lucide-react** — brand and UI icons
 
-## React Compiler
+## Getting started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev      # start the dev server at http://localhost:5173
+```
 
-## Expanding the ESLint configuration
+Other scripts:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build     # production build to dist/
+npm run preview   # preview the production build locally
+npm run lint      # ESLint
+```
+
+## Project structure
+
+```
+src/
+  main.jsx                   # entry point
+  App.jsx                    # router + route-transition animation
+  pages/                     # route-level components (composition only)
+  components/
+    layout/                  # Navbar, Footer
+    sections/                # Hero, Skills, Projects, Contact
+    ui/                      # reusable primitives — Button, GlassCard, Ticker, etc.
+  data/                      # content (skills, projects, copy) kept out of JSX
+  hooks/                     # useActiveSection (scroll-spy)
+  styles/theme.css           # Tailwind entry + design tokens
+```
+
+See [docs/design/](docs/design/) for the reasoning behind larger design and
+architecture decisions.
+
+## Deployment
+
+Pushes to `main` run lint + build in CI (`.github/workflows/deploy.yml`) and
+deploy to Vercel on success; other branches get a Vercel preview deployment.
